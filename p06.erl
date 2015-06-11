@@ -1,6 +1,6 @@
-	-module(p06).
+-module(p06).
 -export([pal/1]).
-last([H|[]])->H;
-last([H|T])->last(T).
-pal([H|[]])->true;
-pal([H|T])->[H=:=last(T)].
+
+
+pal(L)->
+	p05:rev(L)=:=L.

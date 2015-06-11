@@ -1,4 +1,13 @@
 -module(p05).
 -export([rev/1]).
-rev([H|[]])->H;
-rev([H|T])->([rev(T),H]).
+
+
+rev(L)->
+	rev(L,[]).
+
+
+rev([H|T],A)->
+	rev(T,[H|A]);
+
+rev([],A)->
+	A.
