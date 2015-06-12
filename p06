@@ -1,3 +1,0 @@
--module(p06).
--export([pal/1]).
-pal([H|H])->true.
