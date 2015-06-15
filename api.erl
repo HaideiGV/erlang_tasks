@@ -1,26 +1,38 @@
 -module(api).
--export([new/1,add/2, update/3, del/2, search/2]).
+-export([new/1,add/3, update/3, del/2, search/2, search_by_date/ 2]).
 
 
 %create ETS
-new(name)->
-	ets:new(name,[bag, named_table, public]).
+new(Name)->
+	ets:new(Name,[bag, named_table, public]).
 
 %add new post
-add(name, {id, text})->
-	ets:insert(name,{id, text, calendar:local_time()}).
+add(Name, Id, Txt)->
+	ets:insert(Name,{Id, Txt, calendar:local_time()}).
 
 %update post
-update(name, id, text)->
-	ets:insert(name,{id, text, calendar:local_time()}).
+update(Name, Id, Txt)->
+	ets:insert(Name,{Id, Txt, calendar:local_time()}).
 
 %delete post
-del(name, id)->
-	ets:delete(name, id).
+del(Name, Id)->
+	ets:delete(Name, Id).
 
 %search posts by id
-search(name, id)->
-	ets:lookup(name, id).
+search(Name, Id)->
+	ets:lookup(Name, Id).
 
-search_by_date(name,{y, m ,d})->
-	ets:select(name, [{$1,$2,$3}, {}, {}]).
+search_by_date(Name,{Y, M ,D})->
+	ets:select(Name, [{'$1','$2','$3'}, [], {'$_'}]).
+
+
+
+
+%% testing api module
+-ifdef (TEST).
+-include_lib("eunit/include/eunit.hrl").
+
+simple_test()->
+	ok = application:start(api),
+	?assertNot(undefined == whereis(api)).
+-endif.

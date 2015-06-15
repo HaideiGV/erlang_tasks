@@ -1,12 +1,14 @@
 -module(p21).
 -export([words/1]).
 
-words(Bin)->
-	lists:reverse(words(Bin,[])).
+words(Bin)->words(Bin, <<>>).
 
 
-words(<<" ">>, Acc)->
+words(<<" ",Rest/binary>>, Acc)->
 	Acc;
 
-words(<<Val:8,Rest/binary>>, Acc)->
-	words(Rest,[Val|Acc]).
+words(<<X,Rest/binary>>, Acc)->	words(Rest ,<<Acc/binary, X>>);
+
+
+words(<<>>, Acc)->
+	Acc.
