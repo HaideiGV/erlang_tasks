@@ -1,15 +1,16 @@
 -module(p10).
--export([rle/1]).
+-export([pack/1]).
 
 
-rle([X|L]) ->
-	rle(1,X,L).
+pack(L)->p05:rev(pack(L, 0, [])).
 
-rle(T,X,[])-> 
-	[ {T,X} ];
 
-rle(T,X,[X|L]) ->
-	rle(T+1,X,L);
+pack([], C, Acc)->
+	Acc;
 
-rle(T,X,[Y|L])->
-	rle (T,X,[]) ++ rle(1,Y,L).
+pack([H|[H|T]], C,  Acc)->
+	pack([H|T], C +1, Acc);
+
+pack([H|T], C, Acc)->
+	K = {C+1, H}, pack(T, 0, [K|Acc]).
+
