@@ -1,12 +1,12 @@
 -module(area_server).
--export([loop/0, rpc/2]).
+-export([loop/0, rpc/2, start/0, table/2]).
 
 
-% start()-> spawn(fun loop/0).
+start()-> spawn(fun loop/0).
 
 
-% table(Pid, What)->
-% 	rpc(Pid, What).
+table(Pid, What)->
+	rpc(Pid, What).
 
 %%remote procedure call
 rpc(Pid, Request)->
