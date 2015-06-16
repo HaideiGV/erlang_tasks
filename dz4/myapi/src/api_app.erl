@@ -64,10 +64,13 @@ search_by_id(Name, Id)->
 
 
 %% testing api module
--ifdef (TEST).
+%%-ifdef (TEST).
 -include_lib("eunit/include/eunit.hrl").
 
-simple_test()->
-	ok = application:start(api),
-	?assertNot(undefined == whereis(api)).
+api_app_test_()->[
+	
+	?assertEqual(tab, new(tab)),
+	?assertEqual(true,add(tab, key, value)),
+	?assertEqual(true,del(tab, key))
+	].
 -endif.
