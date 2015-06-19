@@ -1,0 +1,171 @@
+dev@dev-Lenovo-IdeaPad-Z510:~$ cd /home/dev/erlang/erlang_tasks/cowboy/
+dev@dev-Lenovo-IdeaPad-Z510:~/erlang/erlang_tasks/cowboy$ git checkout  1.0.1
+Note: checking out '1.0.1'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at 3d90780... Update Cowboy to 1.0.1
+dev@dev-Lenovo-IdeaPad-Z510:~/erlang/erlang_tasks/cowboy$ cd examples
+dev@dev-Lenovo-IdeaPad-Z510:~/erlang/erlang_tasks/cowboy/examples$ 
+dev@dev-Lenovo-IdeaPad-Z510:~/erlang/erlang_tasks/cowboy/examples$ 
+dev@dev-Lenovo-IdeaPad-Z510:~/erlang/erlang_tasks/cowboy/examples$ 
+dev@dev-Lenovo-IdeaPad-Z510:~/erlang/erlang_tasks/cowboy/examples$ cd hello_world
+dev@dev-Lenovo-IdeaPad-Z510:~/erlang/erlang_tasks/cowboy/examples/hello_world$ 
+dev@dev-Lenovo-IdeaPad-Z510:~/erlang/erlang_tasks/cowboy/examples/hello_world$ 
+dev@dev-Lenovo-IdeaPad-Z510:~/erlang/erlang_tasks/cowboy/examples/hello_world$ 
+dev@dev-Lenovo-IdeaPad-Z510:~/erlang/erlang_tasks/cowboy/examples/hello_world$ 
+dev@dev-Lenovo-IdeaPad-Z510:~/erlang/erlang_tasks/cowboy/examples/hello_world$ 
+dev@dev-Lenovo-IdeaPad-Z510:~/erlang/erlang_tasks/cowboy/examples/hello_world$ 
+dev@dev-Lenovo-IdeaPad-Z510:~/erlang/erlang_tasks/cowboy/examples/hello_world$ make
+--2015-06-16 21:16:56--  https://raw.githubusercontent.com/ninenines/erlang.mk/master/packages.v2.tsv
+Распознаётся raw.githubusercontent.com (raw.githubusercontent.com)… 185.31.17.133
+Подключение к raw.githubusercontent.com (raw.githubusercontent.com)|185.31.17.133|:443... соединение установлено.
+HTTP-запрос отправлен. Ожидание ответа... 200 OK
+Длина: 61658 (60K) [text/plain]
+Сохранение в: «/home/dev/erlang/erlang_tasks/cowboy/examples/hello_world/.erlang.mk.packages.v2»
+
+100%[=========================================================================================================>] 61.658      --.-K/s   за 0,06s   
+
+2015-06-16 21:16:56 (968 KB/s) - «/home/dev/erlang/erlang_tasks/cowboy/examples/hello_world/.erlang.mk.packages.v2» сохранён [61658/61658]
+
+Cloning into '/home/dev/erlang/erlang_tasks/cowboy/examples/hello_world/deps/cowboy'...
+remote: Counting objects: 7368, done.
+remote: Compressing objects: 100% (14/14), done.
+remote: Total 7368 (delta 3), reused 0 (delta 0), pack-reused 7354
+Receiving objects: 100% (7368/7368), 5.57 MiB | 745.00 KiB/s, done.
+Resolving deltas: 100% (4346/4346), done.
+Checking connectivity... готово.
+make[1]: вход в каталог «/home/dev/erlang/erlang_tasks/cowboy/examples/hello_world/deps/cowboy»
+Cloning into '/home/dev/erlang/erlang_tasks/cowboy/examples/hello_world/deps/cowlib'...
+remote: Counting objects: 664, done.
+remote: Total 664 (delta 0), reused 0 (delta 0), pack-reused 664
+Receiving objects: 100% (664/664), 270.57 KiB | 288.00 KiB/s, done.
+Resolving deltas: 100% (446/446), done.
+Checking connectivity... готово.
+Cloning into '/home/dev/erlang/erlang_tasks/cowboy/examples/hello_world/deps/ranch'...
+remote: Counting objects: 943, done.
+remote: Total 943 (delta 0), reused 0 (delta 0), pack-reused 943
+Receiving objects: 100% (943/943), 308.63 KiB | 338.00 KiB/s, done.
+Resolving deltas: 100% (547/547), done.
+Checking connectivity... готово.
+make[2]: вход в каталог «/home/dev/erlang/erlang_tasks/cowboy/examples/hello_world/deps/cowlib»
+ ERLC   cow_spdy.erl cow_cookie.erl cow_multipart.erl cow_mimetypes.erl cow_http.erl cow_http_te.erl cow_qs.erl cow_date.erl cow_http_hd.erl
+ APP    cowlib.app.src
+make[2]: выход из каталога «/home/dev/erlang/erlang_tasks/cowboy/examples/hello_world/deps/cowlib»
+make[2]: вход в каталог «/home/dev/erlang/erlang_tasks/cowboy/examples/hello_world/deps/ranch»
+ ERLC   ranch_conns_sup.erl ranch_acceptors_sup.erl ranch_acceptor.erl ranch_transport.erl ranch_app.erl ranch_protocol.erl ranch_listener_sup.erl ranch_server.erl ranch.erl ranch_ssl.erl ranch_sup.erl ranch_tcp.erl
+ APP    ranch.app.src
+make[2]: выход из каталога «/home/dev/erlang/erlang_tasks/cowboy/examples/hello_world/deps/ranch»
+ ERLC   cowboy.erl cowboy_sup.erl cowboy_router.erl cowboy_clock.erl cowboy_http.erl cowboy_loop_handler.erl cowboy_websocket_handler.erl cowboy_middleware.erl cowboy_rest.erl cowboy_static.erl cowboy_protocol.erl cowboy_req.erl cowboy_http_handler.erl cowboy_sub_protocol.erl cowboy_app.erl cowboy_handler.erl cowboy_websocket.erl cowboy_spdy.erl cowboy_bstr.erl
+ APP    cowboy.app.src
+make[1]: выход из каталога «/home/dev/erlang/erlang_tasks/cowboy/examples/hello_world/deps/cowboy»
+ ERLC   hello_world_sup.erl hello_world_app.erl toppage_handler.erl
+ APP    hello_world.app.src
+ GEN    distclean-relx-rel
+--2015-06-16 21:17:11--  https://github.com/erlware/relx/releases/download/v1.0.2/relx
+Распознаётся github.com (github.com)… 192.30.252.130
+Подключение к github.com (github.com)|192.30.252.130|:443... соединение установлено.
+HTTP-запрос отправлен. Ожидание ответа... 302 Found
+Адрес: https://s3.amazonaws.com/github-cloud/releases/9900098/f6fcb596-e38d-11e3-9e8b-c953e4c1e42a?response-content-disposition=attachment%3B%20filename%3Drelx&response-content-type=application/octet-stream&AWSAccessKeyId=AKIAISTNZFOVBIJMK3TQ&Expires=1434478692&Signature=CzgkH%2FYIg1XysIHzOp6y5mudShs%3D [переход]
+--2015-06-16 21:17:12--  https://s3.amazonaws.com/github-cloud/releases/9900098/f6fcb596-e38d-11e3-9e8b-c953e4c1e42a?response-content-disposition=attachment%3B%20filename%3Drelx&response-content-type=application/octet-stream&AWSAccessKeyId=AKIAISTNZFOVBIJMK3TQ&Expires=1434478692&Signature=CzgkH%2FYIg1XysIHzOp6y5mudShs%3D
+Распознаётся s3.amazonaws.com (s3.amazonaws.com)… 54.231.10.16
+Подключение к s3.amazonaws.com (s3.amazonaws.com)|54.231.10.16|:443... соединение установлено.
+HTTP-запрос отправлен. Ожидание ответа... 200 OK
+Длина: 743699 (726K) [application/octet-stream]
+Сохранение в: «/home/dev/erlang/erlang_tasks/cowboy/examples/hello_world/relx»
+
+100%[=========================================================================================================>] 743.699      349KB/s   за 2,1s   
+
+2015-06-16 21:17:15 (349 KB/s) - «/home/dev/erlang/erlang_tasks/cowboy/examples/hello_world/relx» сохранён [743699/743699]
+
+===> Starting relx build process ...
+===> Resolving OTP Applications from directories:
+          /home/dev/erlang/erlang_tasks/cowboy/examples/hello_world/ebin
+          /home/dev/erlang/erlang_tasks/cowboy/examples/hello_world/deps
+          /usr/lib/erlang/lib
+===> Missing beam file elf_format <<"/usr/lib/erlang/lib/hipe-3.11.1/ebin/elf_format.beam">>
+===> Resolving available OTP Releases from directories:
+          /home/dev/erlang/erlang_tasks/cowboy/examples/hello_world/ebin
+          /home/dev/erlang/erlang_tasks/cowboy/examples/hello_world/deps
+          /usr/lib/erlang/lib
+===> Resolved hello_world_example-1
+===> Including Erts from /usr/lib/erlang
+===> release successfully created!
+dev@dev-Lenovo-IdeaPad-Z510:~/erlang/erlang_tasks/cowboy/examples/hello_world$ erl -pa ebin/-pa deps/*/ebin
+Erlang/OTP 17 [erts-6.2] [source] [smp:4:4] [async-threads:10] [kernel-poll:false]
+
+Eshell V6.2  (abort with ^G)
+1> 
+1> 
+1> 
+1> 
+1> 
+1> 
+1> 
+1> application:st
+start/1       start/2       start_boot/1  start_boot/2  start_type/0  
+stop/1        
+1> application:start(hello_world).
+{error,{"no such file or directory","hello_world.app"}}
+2> application:start(cowboy).     
+{error,{not_started,ranch}}
+3> application:start(ranch').
+3> application:start(ranch').
+* 1: syntax error before: ').\napplication:start(ranch'
+3> application:start(ranch). 
+ok
+4> application:start(hello_world).
+{error,{"no such file or directory","hello_world.app"}}
+5> application:start(cowlib).     
+{error,{not_started,crypto}}
+6> application:start(crypto).
+ok
+7> application:start(hello_world).
+{error,{"no such file or directory","hello_world.app"}}
+8> application:start(hello_world).
+{error,{"no such file or directory","hello_world.app"}}
+9> application:start(hello_world.app).
+* 1: syntax error before: '.'
+9> application:start(hello_world).    
+{error,{"no such file or directory","hello_world.app"}}
+10> 
+BREAK: (a)bort (c)ontinue (p)roc info (i)nfo (l)oaded
+       (v)ersion (k)ill (D)b-tables (d)istribution
+^Cdev@dev-Lenovo-IdeaPad-Z510:~/erlang/erlang_tasks/cowboy/examples/hello_world$ erl -pa ebin/-pa deps/*/ebin
+Erlang/OTP 17 [erts-6.2] [source] [smp:4:4] [async-threads:10] [kernel-poll:false]
+
+Eshell V6.2  (abort with ^G)
+1> application:start(hello_world).
+{error,{"no such file or directory","hello_world.app"}}
+2> application:start().           
+** exception error: undefined function application:start/0
+3> application:start(hello_world).
+{error,{"no such file or directory","hello_world.app"}}
+4> 
+BREAK: (a)bort (c)ontinue (p)roc info (i)nfo (l)oaded
+       (v)ersion (k)ill (D)b-tables (d)istribution
+^Cdev@dev-Lenovo-IdeaPad-Z510:~/erlang/erlang_tasks/cowboy/examples/hello_world$ cd websocet/
+bash: cd: websocet/: Нет такого файла или каталога
+dev@dev-Lenovo-IdeaPad-Z510:~/erlang/erlang_tasks/cowboy/examples/hello_world$ cd websocket/
+bash: cd: websocket/: Нет такого файла или каталога
+4dev@dev-Lenovo-IdeaPad-Z510:~/erlang/erlang_tasks/cowboy/examples/hello_world$ cd websocket/
+bash: cd: websocket/: Нет такого файла или каталога
+dev@dev-Lenovo-IdeaPad-Z510:~/erlang/erlang_tasks/cowboy/examples/hello_world$ cd websocket/
+bash: cd: websocket/: Нет такого файла или каталога
+dev@dev-Lenovo-IdeaPad-Z510:~/erlang/erlang_tasks/cowboy/examples/hello_world$ cсвюю
+cсвюю: команда не найдена
+dev@dev-Lenovo-IdeaPad-Z510:~/erlang/erlang_tasks/cowboy/examples/hello_world$ cd..
+cd..: команда не найдена
+dev@dev-Lenovo-IdeaPad-Z510:~/erlang/erlang_tasks/cowboy/examples/hello_world$ cd..
+cd..: команда не найдена
+dev@dev-Lenovo-IdeaPad-Z510:~/erlang/erlang_tasks/cowboy/examples/hello_world$ cd websocket/
+bash: cd: websocket/: Нет такого файла или каталога
+dev@dev-Lenovo-IdeaPad-Z510:~/erlang/erlang_tasks/cowboy/examples/hello_world$ 
+
