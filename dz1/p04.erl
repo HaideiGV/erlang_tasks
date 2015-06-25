@@ -4,8 +4,7 @@
 len(L)->
 	len(L,0).
 
-len([H|T],A)->
-	len(T,A+1);
-
-len([],A)->
-	A.
+len([H|T],Acc)->
+	1+len(T,Acc);
+len([],Acc)->
+	Acc.
