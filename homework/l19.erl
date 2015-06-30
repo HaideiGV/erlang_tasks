@@ -1,18 +1,18 @@
 -module(l19).
 -export([pack/1]).
 
+%reverse the result list
+pack(L) -> lists:reverse(pack(L, [])).
 
-pack([[H1|T]|[H2|T]])->
-	pack([H1|[H2|T]]);
 
-pack([[H1|T]|[H2|[]]])->
-	[H2,pack([H1|T])];
+pack([H|T],[H|Res])->
+	pack(T, [[H,H]|Res]);
 
-pack([[H1|T1]|[H2|T2]])->
-	[[H1|T1],pack([H2|T2])];
+pack([H|T],[[H|H1]|Res])->
+	pack(T, [[H, H|H1]|Res]);
 
-pack([H|[H|T]])->
-	[H|pack([H|T])];
+pack([H|T], Res)->
+	pack(T, [H|Res]);
 
-pack([])->
-	[].
+pack([], Res)->
+	Res.
