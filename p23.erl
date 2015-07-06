@@ -4,19 +4,18 @@
 
 sp(BinStr,Div)->
 	BinDiv=list_to_binary(Div),
-	Size=byte_size(Div),
+	Size=bit_size(term_to_binary(Div)),
 	sp(BinStr,BinDiv,Size,<<>>,[]).
 
 
-sp(BinStr,Div,Size,word,Acc)-> 
-	
+sp(BinStr,Div,Size,Word,Acc)->
 	case BinStr of
 		<<Div:Size/binary,Rest/binary>> -> 
-			sp(Rest,Div,Size,<<>>,[word|Acc]);
+			sp(Rest,Div,Size,<<>>,[Word|Acc]);
 		
 		<<X,Rest/binary>> -> 
-			sp(Rest,Div,Size,<<word/binary,X>>,Acc);
+			sp(Rest,Div,Size,<<Word/binary,X>>,Acc);
 		
 		<<>> -> 
-			list:reverse([word|Acc])
+			lists:reverse([Word|Acc])
 	end.	
