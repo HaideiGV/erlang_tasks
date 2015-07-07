@@ -8,13 +8,13 @@ sp(BinStr,Div)->
 	sp(BinStr,BinDiv,Size,<<>>,[]).
 
 
-sp(BinStr,Div,Size,Word,Acc)->
+sp(BinStr,BinDiv,Size,Word,Acc)->
 	case BinStr of
-		<<Div:Size/binary,Rest/binary>> -> 
-			sp(Rest,Div,Size,<<>>,[Word|Acc]);
+		<<BinDiv:Size/binary,Rest/binary>> -> 
+			sp(Rest,BinDiv,Size,<<>>,[Word|Acc]);
 		
 		<<X,Rest/binary>> -> 
-			sp(Rest,Div,Size,<<Word/binary,X>>,Acc);
+			sp(Rest,BinDiv,Size,<<Word/binary,X>>,Acc);
 		
 		<<>> -> 
 			lists:reverse([Word|Acc])
