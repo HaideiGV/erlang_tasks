@@ -1,4 +1,4 @@
--module(l111).
+-module(rle_mod).
 -export([rle_mod/1]).
 
 

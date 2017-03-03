@@ -1,4 +1,4 @@
--module(l17).
+-module(flatten).
 -export([flat/1]).
 
 flat(L)->

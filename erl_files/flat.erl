@@ -1,4 +1,4 @@
--module(p071).
+-module(flat).
 -export([flat/1]).
 
 

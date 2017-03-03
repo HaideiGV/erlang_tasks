@@ -1,4 +1,4 @@
--module(l14).
+-module(lenghts).
 -export([len/1]).
 
 

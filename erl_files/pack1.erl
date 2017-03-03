@@ -1,4 +1,4 @@
--module(p09).
+-module(pack1).
 -export([pack/1]).
 
 

@@ -1,4 +1,4 @@
--module(p23).
+-module(sp).
 -export([sp/2]).
 
 

@@ -1,4 +1,4 @@
--module(p231).
+-module(concat).
 -export([concat/2]).
 
 

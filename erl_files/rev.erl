@@ -1,4 +1,4 @@
--module(p05).
+-module(rev).
 -export([rev/1]).
 
 

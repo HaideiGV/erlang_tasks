@@ -1,4 +1,4 @@
--module(l16).
+-module(pal).
 -export([pal/1]).
 
 

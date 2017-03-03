@@ -1,4 +1,4 @@
--module(l114).
+-module(dup).
 -export([dup/1]).
 
 dup(L)->

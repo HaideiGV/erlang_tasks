@@ -1,4 +1,4 @@
--module(l19).
+-module(packing).
 -export([pack/1]).
 
 %reverse the result list

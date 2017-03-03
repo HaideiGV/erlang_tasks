@@ -1,4 +1,4 @@
--module(l18).
+-module(comp).
 -export([comp/1]).
 
 

@@ -1,4 +1,4 @@
--module(p21).
+-module(words).
 -export([words/1]).
 
 words(Bin)->words(Bin, <<>>).

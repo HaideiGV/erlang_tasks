@@ -1,4 +1,4 @@
--module(p22).
+-module(words1).
 -export([words/1]).
 
 

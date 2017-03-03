@@ -1,4 +1,4 @@
--module(p04).
+-module(len).
 -export([len/1]).
 
 len(L)->

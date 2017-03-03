@@ -1,4 +1,4 @@
--module(l13).
+-module(nth).
 -export([nth/2]).
 
 % nth(L, N)->

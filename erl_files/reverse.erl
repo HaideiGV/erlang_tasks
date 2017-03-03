@@ -1,4 +1,4 @@
--module(l15).
+-module(reverse).
 -export([rev/1]).
 
 

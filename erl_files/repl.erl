@@ -1,4 +1,4 @@
--module(l115).
+-module(repl).
 -export([repl/2]).
 
 repl(L,N)->

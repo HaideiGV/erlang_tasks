@@ -1,4 +1,4 @@
--module(l12).
+-module(twolast).
 -export([two_last/1]).
 
 

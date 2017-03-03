@@ -1,4 +1,4 @@
--module(l112).
+-module(decode).
 -export([decode/1]).
 
 

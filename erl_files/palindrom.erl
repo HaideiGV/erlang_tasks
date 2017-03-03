@@ -1,4 +1,4 @@
--module(p06).
+-module(palindrom).
 -export([pal/1]).
 
 

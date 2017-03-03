@@ -1,5 +1,5 @@
 %% last element of list
--module(l11).
+-module(last1).
 -export([last/1]).
 
 last([H|[]])->

@@ -1,4 +1,4 @@
--module(p01).
+-module(last).
 -export([last/1]).
 last([H|[]])->H;
 last([H|T])->last(T).
