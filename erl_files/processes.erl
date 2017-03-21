@@ -6,6 +6,7 @@ max(N)->
 	Max = erlang:system_info(process_limit),
 	io:format("Max allowed proc~p~n", [Max]),
 	statistics(runtime),
+
 	statistics(wall_clock),
 	L = for(1, N, fun()->spawn(fun()->wait(2) end) end),
 	{_, T1} = statistics(runtime),
